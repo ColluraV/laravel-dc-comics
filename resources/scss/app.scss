@@ -1,1 +1,160 @@
-@import "bootstrap";
+@use "./partials/variables.scss" as *;
+@use "bootstrap";
+
+header {
+    .container {
+        height: 100%;
+
+        ul {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+    }
+
+    img {
+        width: 80px;
+    }
+
+    .nav-link {
+        color: $colorText;
+        font-weight: 700;
+    }
+
+    .subbed {
+        border-bottom: 3px solid transparent;
+        margin-left: 1rem;
+    }
+
+    .subbed:hover {
+        border-bottom: 2px solid $color-primary;
+    }
+}
+
+.darkBanner {
+    background-color: $colorDark;
+}
+
+#cards_container {
+    max-width: 1400px;
+    margin: auto;
+}
+
+#jumboImg {
+    height: 450px;
+    object-fit: cover;
+    object-position: top;
+    width: 100%;
+}
+
+#title {
+    background-color: $color-primary;
+    color: white;
+    top: -7%;
+    left: 15%;
+    padding: 0.5rem;
+}
+
+footer {
+    background-image: url(/public/images/footer-bg.jpg);
+    background-size: cover;
+}
+
+div a {
+    text-decoration: none;
+    color: gray;
+}
+
+h5 {
+    color: white;
+}
+
+.bottom {
+
+
+    margin: auto;
+}
+
+.contacts {
+    background-color: #303030;
+    height: 200px;
+
+    >.container {
+        height: 100%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
+.btn-outline-primary {
+    border-radius: 0;
+    color: white;
+    font-size: 1.1rem;
+    height: 80px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.socials {
+    color: $color-primary;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    >img {
+        margin: 0 10px;
+
+    }
+}
+
+#cutted {
+    background-image: url(/public/images/dc-logo-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.col-4 {
+    margin-left: auto;
+}
+
+.darkBanner{
+    background-color: $colorDark;
+}
+
+.hidden{
+    display: none;
+}
+.absolute.hidden{
+
+    color: white;
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.top{
+    top: 5%;
+    background-color: rgba(0, 0, 0, 0.652);
+}
+
+.bottom{
+    bottom: 35%;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.652);
+}
+.card:hover .hidden{
+    display: block;
+}
+
+.overlay{
+    height: 100%;
+}
+
+.card-img-top{
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-body{
+    min-height: 120px;
+    justify-content: center;
+}
