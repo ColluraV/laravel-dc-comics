@@ -69,8 +69,6 @@ h5 {
 }
 
 .bottom {
-
-
     margin: auto;
 }
 
@@ -92,6 +90,7 @@ h5 {
     height: 80px;
     margin-top: auto;
     margin-bottom: auto;
+
 }
 
 .socials {
@@ -123,38 +122,45 @@ h5 {
 
 .hidden{
     display: none;
+    height: 20%;
 }
 .absolute.hidden{
 
     color: white;
-    padding: 1rem 0;
     width: 100%;
 }
 
 .top{
     top: 5%;
-    background-color: rgba(0, 0, 0, 0.652);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .bottom{
     bottom: 35%;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.652);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 .card:hover .hidden{
-    display: block;
-}
+    display: flex;
+    flex-direction: column;
 
-.overlay{
-    height: 100%;
 }
 
 .card-img-top{
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
 .card-body{
     min-height: 120px;
     justify-content: center;
 }
+
+.RefImg{
+
+
+}
+
+
+

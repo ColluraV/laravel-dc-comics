@@ -21,13 +21,13 @@
         <img src="/images/dc-logo.png" alt="" >
       </a>
 
-      <div class="LinkContainer d-flex align-items-center justify-content-evenly">
+      <div class="LinkContainer nav d-flex align-items-center justify-content-evenly">
 
         
         @foreach ($navLinks as $link){{-- //////links top////// --}}
         
         <div class="subbed d-flex" >
-         <a class="nav-link" href="/comics">
+         <a class="nav-link" href="#">
             {{ $link["name"] }}
           </a>
         </div>

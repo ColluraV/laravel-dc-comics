@@ -1,7 +1,7 @@
 @extends('layouts.public')
 
 @section('content')
-    <div class=" text-center">
+    <div class=" text-center darkBg p-3">
 
         <h1>Benvenuto</h1>
         <p>scegli il fumetto che ti interessa</p>
@@ -13,11 +13,12 @@
                 <div class="text-center relative">
 
 
-                    <div id="cards_container" class="row row-cols-6 gy-3 my-5 flex-wrap">
+                    <div id="cards_container" class="row flex-wrap gy-5">
 
                         {{-- ////////////// cards in ciclo for //////////////// --}}
                         @foreach ($comics as $cardComics)
-                            <div class="col">
+                            <div class="col-12 col-md-4 col-lg-2">
+                                <a href="{{ route('show', $cardComics->id) }}">
 
                                 <div class="card border-0 rounded-0 h-100">
                                     <img class="relative card-img-top" src={{ $cardComics['thumb'] }}
@@ -27,19 +28,18 @@
                                         {{ $cardComics['series'] }}
                                     </div>
                                     <div class="overlay"> {{-- //////info in hover////// --}}
-                                        <a href="{{ route('show', $cardComics->id) }}">
 
-                                            <div class="absolute top hidden">Tipologia: <br>{{ $cardComics['type'] }}</div>
-                                            <div class="absolute bottom hidden">Prezzo: {{ $cardComics['price'] }}</div>
+                                            <div class="absolute top hidden justify-content-center">Tipologia:{{ ucfirst($cardComics['type']) }}</div>
+                                            <div class="absolute bottom hidden justify-content-center">Prezzo: {{ $cardComics['price'] }} €</div>
 
-                                        </a>
+                                        </div>
+                                        
+                                        
                                     </div>
-
-
+                                    
+                                </a>
                                 </div>
-
-                            </div>
-                        @endforeach
+                                @endforeach
 
                     </div>
                 </div>
