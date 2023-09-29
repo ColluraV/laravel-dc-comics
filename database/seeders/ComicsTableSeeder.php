@@ -223,7 +223,7 @@ class ComicsTableSeeder extends Seeder
         ]
     ];
     public function run(): void {
-        foreach ($this->$listaComics as $comic) {
+        foreach ($this->listaComics as $comic) {
             $newComic = new Comic();
 
             $newComic->title = $comic["title"];
