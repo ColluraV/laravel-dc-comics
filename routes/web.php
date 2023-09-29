@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
+use App\Models\Comic;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,5 @@ use App\Http\Controllers\ComicController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/',[ComicController::class, "index"])->name("index");
+Route::get("/comic/{cardComics}", [ComicController::class, "show"])->name("show");

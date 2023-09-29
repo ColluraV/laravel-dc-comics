@@ -26,11 +26,15 @@
                                 <div class="card-body text-white bg-dark"> {{-- //////nome////// --}}
                                     {{ $cardComics['series'] }}
                                 </div>
+                                <a href="{{ route('show', $cardComics->id) }}">
 
-                                <div class="overlay"> {{-- //////info in hover////// --}}
-                                    <div class="absolute top hidden">Tipologia: <br>{{ $cardComics['type'] }}</div>
-                                    <div class="absolute bottom hidden">Prezzo: {{ $cardComics['price'] }}</div>
-                                </div>
+                                    <div class="overlay"> {{-- //////info in hover////// --}}
+                                        <div class="absolute top hidden">Tipologia: <br>{{ $cardComics['type'] }}</div>
+                                        <div class="absolute bottom hidden">Prezzo: {{ $cardComics['price'] }}</div>
+                                    </div>
+                                
+                                </a>
+
 
                             </div>
 
