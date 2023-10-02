@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ComicController;
 use App\Models\Comic;
+use GuzzleHttp\Promise\Create;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,5 +16,12 @@ use App\Models\Comic;
 |
 */
 
+
+//create
+Route::get('/create',[ComicController::class, "create"])->name("comic.create");
+Route::post("/",[ComicController::class, "store"])->name("comic.store");
+
+
+//read
 Route::get('/',[ComicController::class, "index"])->name("index");
 Route::get("/comic/{cardComics}", [ComicController::class, "show"])->name("show");
