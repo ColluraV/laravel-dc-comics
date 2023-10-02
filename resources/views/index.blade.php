@@ -4,7 +4,8 @@
     <div class=" text-center darkBg p-3">
 
         <h1>Benvenuto</h1>
-        <p>scegli il fumetto che ti interessa</p>
+        <p>scegli il fumetto che ti interessa oppure</p>
+        <p><a style="color: white" href="{{route('comic.create')}}">aggiungine uno</a></p>
         <div class=" text-center">
 
             {{-- @include('partials.cardsContainer') --}}
