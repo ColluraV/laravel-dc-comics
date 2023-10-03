@@ -24,8 +24,11 @@ Route::post("/",[ComicController::class, "store"])->name("comic.store");
 
 //read
 Route::get('/',[ComicController::class, "index"])->name("index");
-Route::get("/{cardComics}", [ComicController::class, "show"])->name("show");
+Route::get("/card/{cardComics}", [ComicController::class, "show"])->name("show");
 
 //update
 Route::get('/card/{id}/edit',[ComicController::class, "edit"])->name("comic.edit");
 Route::put("/card/{cardComics}", [ComicController::class, "update"])->name("comic.update");
+
+//delete
+Route::delete("/card/{id}", [ComicController::class, "destroy"])->name("comic.destroy");

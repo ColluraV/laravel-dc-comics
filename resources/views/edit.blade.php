@@ -71,8 +71,14 @@
                     </div>
 
                     <div class="d-flex text-center justify-content-center gap-2 my-4">
-                        <a type="submit" href="{{ route('index') }}" class="btn btn-secondary">Annulla</a>
-                        <button class="btn btn-primary">Conferma</button>
+                       <form action="{{route('comic.destroy',['id'=>$cardComics->id])}}"
+                        method="POST">
+                        @csrf
+
+                        @method('DELETE')
+                        <input type="submit" class="btn btn-danger" value="Elimina">
+
+                        </form>
                     </div>
 
                 </form>
